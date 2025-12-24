@@ -46,6 +46,7 @@
 
   .link.active::after {
     background-color: var(--color-secondary);
+    scale: 1;
   }
 }
 
