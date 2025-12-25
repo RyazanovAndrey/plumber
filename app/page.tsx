@@ -5,6 +5,9 @@ import HomeItems from "@/partials/HomeItems";
 import Experience from "@/partials/Experience";
 import Blog from "@/partials/Blog";
 import { ChevronUp } from "lucide-react";
+import Testimonials from "@/partials/Tesimonials";
+import Problems from "@/partials/Problems";
+import Footer from "@/components/Footer";
 
 export default function Page() {
   return (
@@ -15,6 +18,9 @@ export default function Page() {
       <Services />
       <Experience />
       <Blog />
+      <Testimonials />
+      <Problems />
+      <Footer />
       <a href="#" className="fixed right-5 bottom-5"><ChevronUp /></a>
     </>
   )
