@@ -8,7 +8,7 @@ const Home = () => {
       <div className="container grid grid-cols-2 gap-10 items-center">
         <div className="space-y-3">
           <div className="uppercase">Read for help you</div>
-          <h1 className="text-6xl font-bold">Expert Plumbing <br /> <span className="text-secondary">services</span> provider</h1>
+          <h1 className="text-6xl font-bold">Expert Plumbing <br /> <span className="text-secondary text-[clamp(1.25rem, 3.12vw, 3.75rem)]">services</span> provider</h1>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut deserunt nemo repellendus cum est sed, tempore id quam laudantium. Totam?</p>
           <Link href={'/'} className="btn inline-block">Learn more</Link>
         </div>
