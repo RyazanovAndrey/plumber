@@ -4,7 +4,7 @@ import imgHero from '../public/hero-3.png'
 
 const Home = () => {
   return (
-    <section className="bg-primary text-white">
+    <section className="bg-primary text-white pt-25">
       <div className="container grid grid-cols-2 gap-10 items-center">
         <div className="space-y-3">
           <div className="uppercase">Read for help you</div>

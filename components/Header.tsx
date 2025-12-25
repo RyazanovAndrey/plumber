@@ -2,13 +2,23 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { navLinks } from "@/data"
+import { useEffect, useState } from "react"
 
 const Header = () => {
 
   const path = usePathname()
+  const [isShowMenu, setisShowMenu] = useState<boolean>(false)
+
+  useEffect(() => {
+    const showNavMenu = () => setisShowMenu(window.scrollY > 400)
+    window.addEventListener('scroll', showNavMenu)
+
+    return () => window.removeEventListener('scroll', showNavMenu)
+
+  }, [])
 
   return (
-    <header className="bg-primary text-white py-3">
+    <header className={`${isShowMenu ? 'fixed' : 'absolute '} w-full top-0 left-0 bg-primary text-white py-3 shadow-xl`}>
         <div className="container flex justify-between items-center">
           <div className="text-3xl">Plumber</div>
           <div className="flex gap-x-20 items-center">

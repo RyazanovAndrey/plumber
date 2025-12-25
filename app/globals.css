@@ -6,6 +6,10 @@
   --color-secondary: #fcd973;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer components {
   .btn {
     background-color: var(--color-secondary);
@@ -17,7 +21,7 @@
     transition: .3s;
 
     &:hover {
-      background-color: black;
+      background-color: #171717;
       color: white;
     }
   }
