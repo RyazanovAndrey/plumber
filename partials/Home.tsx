@@ -1,0 +1,23 @@
+import Image from "next/image"
+import Link from "next/link"
+import imgHero from '../public/hero-3.png'
+
+const Home = () => {
+  return (
+    <section className="bg-primary text-white">
+      <div className="container grid grid-cols-2 gap-10 items-center">
+        <div className="space-y-3">
+          <div className="uppercase">Read for help you</div>
+          <h1 className="text-6xl font-bold">Expert Plumbing <br /> <span className="text-secondary">services</span> provider</h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut deserunt nemo repellendus cum est sed, tempore id quam laudantium. Totam?</p>
+          <Link href={'/'} className="btn inline-block">Learn more</Link>
+        </div>
+        <div className="">
+          <Image src={imgHero} width={450} alt="" preload />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Home

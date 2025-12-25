@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const Services = () => {
   return (
-    <section className="">
+    <section className="pb-10">
         <div className="container">
           <div className="text-center space-y-3 mb-20">
             <span className="section-desc">Our services</span>

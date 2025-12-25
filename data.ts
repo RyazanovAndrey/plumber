@@ -57,3 +57,25 @@ export const servicesCards: TCard[] = [
     icon: "/icon-9.svg",
   },
 ];
+
+export const blogList = [
+  {
+    id: 1,
+    img: "/blog-img-1.png",
+    title: "5 Signs Your Water Heater Needs Professional Attention",
+    date: "sep 20,2024",
+  },
+  {
+    id: 2,
+    img: "/blog-img-2.png",
+    title: "Winter Plumbing Prep: Protecting Your Pipes from Freezing",
+    date: "Aug 12 20,2024",
+  },
+  {
+    id: 3,
+    img: "/blog-img-3.png",
+    title: "DIY vs. Professional Plumbing: When to Call the Experts",
+    date: "Nov 04,2023",
+  },
+];
+

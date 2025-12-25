@@ -17,7 +17,8 @@
     transition: .3s;
 
     &:hover {
-      background-color: white;
+      background-color: black;
+      color: white;
     }
   }
 
@@ -110,6 +111,7 @@ body {
 }
 
 .text-card {
-  -webkit-text-stroke: 3px black;
-  color: transparent; 
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000000;
+  color: transparent;
 }
