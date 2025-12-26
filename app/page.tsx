@@ -15,7 +15,9 @@ export default function Page() {
       <Services />
       <Experience />
       <Blog />
-      <a href="#" className="fixed right-5 bottom-5"><ChevronUp /></a>
+      <div className="size-30 bg-primary">
+        <a href="#" className="fixed right-5 bottom-5 text-primary"><ChevronUp /></a>
+      </div>
     </>
   )
 }
