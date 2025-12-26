@@ -1,5 +1,5 @@
 import Image from "next/image"
-import expImage from '../public/section-img-2.png'
+import expImage from '../public/Section-img-2.png'
 
 const Experience = () => {
   return (

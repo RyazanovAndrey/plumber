@@ -79,3 +79,53 @@ export const blogList = [
   },
 ];
 
+export const testimonialsList = [
+  {
+    id: 1,
+    text: "“Amazing service! They fixed our burst pipe emergency at 2 AM and had everything back to normal by morning. Professional, fast, and reasonably priced.” ",
+    img: "/profile-img-1.png",
+    name: "Lisa mark",
+  },
+  {
+    id: 2,
+    text: "“These guys saved my weekend! My kitchen sink was completely backed up before a dinner party. They came out same day, fixed the problem quickly, and cleaned up perfectly. True professionals.”",
+    img: "/profile-img-2.png",
+    name: "Michael Thompson",
+  },
+  {
+    id: 3,
+    text: "“I've used several plumbers over the years, but none compare to this team. They installed our new water heater and explained everything clearly. Highly recommend!”",
+    img: "/profile-img-3.png",
+    name: "Jennifer Rodriguez",
+  },
+  {
+    id: 4,
+    text: "“Outstanding work on our bathroom renovation. They handled all the plumbing for our new master bath - from rough-in to fixtures. Very impressed!”",
+    img: "/profile-img-4.png",
+    name: "David Chen",
+  },
+];
+
+export const footerList = [
+  {
+    id: 1,
+    title: "Company",
+    list: ["About Us", "Our Team", "Careers", "Testimonials"],
+  },
+  {
+    id: 2,
+    title: "Services",
+    list: [
+      "Emergency Plumbing",
+      "Drain Cleaning",
+      "Pipe Repairs",
+      "Water Heater Services",
+      "Leak Detection",
+    ],
+  },
+  {
+    id: 3,
+    title: "Quick Links",
+    list: ["Home", "About", "Services", "Blog", "Contact"],
+  },
+];
