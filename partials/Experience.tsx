@@ -11,15 +11,15 @@ const Experience = () => {
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat cumque porro ad quasi excepturi voluptatem alias laborum eaque autem mollitia.</p>
             <div className="flex gap-x-20">
               <div className="">
-                <span className="text-2xl font-bold block">15+</span>
+                <span className="text-4xl font-bold block">15+</span>
                 <span>Years of experience</span>
               </div>
               <div className="">
-                <span className="text-2xl font-bold block">10k+</span>
+                <span className="text-4xl font-bold block">10k+</span>
                 <span>Happy clients</span>
               </div>
               <div className="">
-                <span className="text-2xl font-bold block">30+</span>
+                <span className="text-4xl font-bold block">30+</span>
                 <span>Qualified Experts</span>
               </div>
             </div>

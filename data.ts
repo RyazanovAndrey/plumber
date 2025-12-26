@@ -1,3 +1,5 @@
+import { RiEyeLine, RiHandHeartLine, RiShieldCheckLine, RiToolsLine } from "@remixicon/react"
+
 type TNavLinks = {
   href: string, title: string
 }
@@ -127,5 +129,59 @@ export const footerList = [
     id: 3,
     title: "Quick Links",
     list: ["Home", "About", "Services", "Blog", "Contact"],
+  },
+];
+
+export const teamCardItems = [
+  {
+    id: 1,
+    img: "/team-1.png",
+    name: "James Thompson",
+    role: "Senior Plumbing Technician",
+  },
+  {
+    id: 2,
+    img: "/team-2.png",
+    name: "Mark Brooks",
+    role: "Lead Plumber & Operations Manager",
+  },
+  {
+    id: 3,
+    img: "/team-3.png",
+    name: "David Martinez",
+    role: "Certified Plumbing Specialist",
+  },
+  {
+    id: 4,
+    img: "/team-4.png",
+    name: "Robert Johnson",
+    role: "Plumbing Technician",
+  },
+];
+
+export const ourFoundationCardItems = [
+  {
+    id: 1,
+    icon: RiShieldCheckLine,
+    title: "Reliability",
+    text: "We show up when we say we will and complete every job to the highest standard.",
+  },
+  {
+    id: 2,
+    icon: RiEyeLine,
+    title: "Transparency",
+    text: "We provide clear, upfront pricing and explain exactly what needs to be done before we start any work.",
+  },
+  {
+    id: 3,
+    icon: RiHandHeartLine,
+    title: "Integrity",
+    text: "We show up when we say we will and complete every job to the highest standard.",
+  },
+  {
+    id: 4,
+    icon: RiToolsLine,
+    title: "Quality Craftsmanship",
+    text: "Every job, from the smallest repair to major installations, receives our full attention and expertise.",
   },
 ];

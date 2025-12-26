@@ -18,7 +18,7 @@ const Header = () => {
   }, [])
 
   return (
-    <header className={`${isShowMenu ? 'fixed' : 'absolute '} w-full top-0 left-0 bg-primary text-white py-3`}>
+    <header className={`${isShowMenu ? 'fixed' : 'absolute '} w-full top-0 left-0 bg-primary text-white py-3 z-99`}>
         <div className="container flex justify-between items-center">
           <div className="text-3xl">Plumber</div>
           <div className="flex gap-x-20 items-center">

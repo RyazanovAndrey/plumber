@@ -8,7 +8,7 @@ const Problems = () => {
         <div className="container">
           <div className="grid grid-cols-2 items-center">
             <div>
-              <h3 className="section-title">Have a problem we'll fix it today</h3>
+              <h3 className="section-title mb-10">Have a problem we'll fix it today</h3>
               <div className="grid grid-cols-2 gap-x-20 mb-5">
                 <div className="flex items-center gap-x-5 mt-5">
                   <Phone />
@@ -39,9 +39,9 @@ const Problems = () => {
                   </div>
                 </div>
               </div>
-              <Link href={'/'} className="btn-fill-blue">Contact us</Link>
+              <Link href={'/'} className="btn-fill-blue w-50">Contact us</Link>
             </div>
-            <div className="">
+            <div className="flex justify-end">
               <Image src={'/cta-img.png'} alt="" width={500} height={500} />
             </div>
           </div>

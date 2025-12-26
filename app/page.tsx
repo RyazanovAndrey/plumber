@@ -21,7 +21,6 @@ export default function Page() {
       <Testimonials />
       <Problems />
       <Footer />
-      <a href="#" className="fixed p-2 right-5 bottom-5 bg-secondary rounded-full"><ChevronUp color="black" /></a>
     </>
   )
 }

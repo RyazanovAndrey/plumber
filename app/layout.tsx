@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { ChevronUp } from "lucide-react";
 
 const rubik = Rubik({
   variable: "--font-rubik",
@@ -28,7 +30,9 @@ export default function RootLayout({
         <main>
           {children}
         </main>
+        <Footer />
       </body>
+      <a href="#" className="fixed p-2 right-5 bottom-5 bg-secondary rounded-full z-99"><ChevronUp color="black" /></a>
     </html>
   );
 }
