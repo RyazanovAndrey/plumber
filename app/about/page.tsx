@@ -1,4 +1,7 @@
 import { Metadata } from "next";
+import Image from "next/image";
+import slideImg from '../../public/about-page-banner.png'
+import slideImg1 from '../../public/section-img-3.png'
 
 export const metadata: Metadata = {
   title: 'About us',
@@ -7,8 +10,33 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="">
-      About
-    </div>
+    <>
+      <section className="pt-30">
+        <div className="container">
+          <div className="text-center">
+            <p className="section-desc">About us</p>
+            <p className="section-title">Delivering reliable solutions for over 15 years </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, eius maiores vero dolorem aliquid incidunt reiciendis necessitatibus quis, adipisci laborum laboriosam fugit reprehenderit consequatur! Porro eaque dolor consequatur doloremque expedita.</p>
+          </div>
+          <div className="h-50 overflow-hidden my-10">
+            <Image src={slideImg} alt="" className="w-full" />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="container">
+          <div className="grid grid-cols-2 gap-x-20 items-center">
+            <div className="">
+              <div className="section-desc">Our story</div>
+              <h3 className="section-title">From humble beginnings to trusted experts</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex eveniet, aspernatur harum ab molestiae corrupti rerum consectetur sed id facere magnam, nam magni ipsa quasi praesentium aperiam? Libero odit officia voluptatibus atque dicta est repellendus sequi doloribus? Repudiandae repellendus odio officia culpa, sint eius, natus, animi a ut impedit dolore porro? Laboriosam pariatur temporibus tempore veritatis ea, similique excepturi est. Repudiandae sunt labore voluptas excepturi harum nesciunt in molestiae dignissimos eaque provident, doloribus nostrum! Accusantium adipisci temporibus eligendi facilis sapiente cumque, ut harum dolor error, voluptatum quaerat pariatur earum, corporis vel! Quia, adipisci. Eaque, veniam. Aspernatur voluptatum laudantium debitis quo.</p>
+            </div>
+            <div className="flex justify-end">
+            <Image src={slideImg1} alt="" width={500} height={500} className="rounded-2xl" />
+          </div>
+          </div>
+        </div>
+      </section>
+    </>
   )
 }
