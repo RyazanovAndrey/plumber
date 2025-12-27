@@ -1,5 +1,4 @@
 import Image from "next/image"
-import expImage from '../public/section-img-2.png'
 
 const Experience = () => {
   return (
@@ -25,7 +24,7 @@ const Experience = () => {
             </div>
           </div>
           <div className="flex justify-end">
-            <Image className="rounded-2xl" src={expImage} width={400} height={400} alt=""/>
+            <Image className="rounded-2xl" src={'/section-img-2.png'} width={400} height={400} alt=""/>
           </div>
         </div>
     </section>
