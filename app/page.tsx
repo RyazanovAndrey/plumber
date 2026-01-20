@@ -11,12 +11,11 @@ export default function Page() {
   return (
     <>
       <Home />
-      <HomeItems />
       <AboutUs />
       <Services count={7} exploreBlock={true} />
       <Experience />
       <Blog />
-      <Testimonials />
+      <Testimonials /> 
       <Problems />
     </>
   )

@@ -2,10 +2,14 @@ import { footerList } from "@/data"
 import Link from "next/link"
 
 const Footer = () => {
+
+  const year = new Date().getFullYear()
+
   return (
-    <footer className="py-5">
+    <footer className="py-5 hidden">
       <div className="container">
-        <div className="grid grid-cols-4 gap-x-5">
+        <div className="">
+          <div className="grid grid-cols-4 gap-x-5">
           <div className="">
             <div className="font-bold">Plumber</div>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, impedit?</p>
@@ -28,7 +32,10 @@ const Footer = () => {
               return <Link href={'/'} className="block hover:underline">{item}</Link>
             })}
           </div>
-
+        </div>
+        </div>
+        <div className="mt-5">
+          <p>&copy; {year} All rights reserved</p>
         </div>
       </div>
     </footer>

@@ -1,52 +1,50 @@
 import Image from "next/image"
 import { Clock2, Mail, MapPin, Phone } from "lucide-react"
 import Link from "next/link"
+import * as motion from "motion/react-client"
+import { containerStagger, fadeIn, fadeInUp } from "@/motion/animation"
 
 const Problems = () => {
+
+  const problemsList = [
+    { title: 'Phone num', contact: '+38', icon: <Phone size={26} /> },
+    { title: 'Location', contact: '123, Broadway', icon: <MapPin size={26}  /> },
+    { title: 'Email adress', contact: 'help@gmail.com', icon: <Mail size={26}  /> },
+    { title: 'Business Hours', contact: 'help@gmail.com', icon: <Clock2 size={26}  /> },
+  ]
+
   return (
-    <section className="bg-secondary pt-20">
+    <motion.section
+      variants={containerStagger}
+      initial={'hidden'}
+      whileInView={'visible'}
+      viewport={{ once: false }}
+      className="bg-secondary pt-20 hidden">
       <div className="container">
         <div className="grid grid-cols-2 items-center">
           <div>
-            <h3 className="section-title mb-10">Have a problem we'll fix it today</h3>
+            <motion.h3 variants={fadeInUp} className="section-title mb-10">Have a problem we'll fix it today</motion.h3>
             <div className="grid grid-cols-2 gap-x-20 mb-5">
-              <div className="flex items-center gap-x-5 mt-5">
-                <Phone />
-                <div>
-                  <div className="font-bold">Phone num</div>
-                  <div className="">+38</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-x-5 mt-5">
-                <MapPin />
-                <div>
-                  <div className="font-bold">Location</div>
-                  <div className="">123, Broadway</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-x-5 mt-5">
-                <Mail />
-                <div>
-                  <div className="font-bold">Email adress</div>
-                  <div className="">help@gmail.com</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-x-5 mt-5">
-                <Clock2 />
-                <div>
-                  <div className="font-bold">Business Hours</div>
-                  <div className="">help@gmail.com</div>
-                </div>
-              </div>
+              {problemsList.map(item => {
+                return <motion.div variants={fadeInUp} className="flex items-center gap-x-5 mt-5">
+                  <div className="">{item.icon}</div>
+                  <div>
+                    <div className="font-bold">{item.title}</div>
+                    <div className="">{item.contact}</div>
+                  </div>
+                </motion.div>
+              })}
             </div>
-            <Link href={'/'} className="btn-fill-blue w-50">Contact us</Link>
+            <motion.button variants={fadeInUp}>
+              <Link href={'/'} className="btn-fill-blue w-50">Contact us</Link>
+            </motion.button>
           </div>
-          <div className="flex justify-end">
-            <Image src={'/cta-img.png'} alt="" width={500} height={500} />
-          </div>
+          <motion.div variants={fadeIn} className="flex justify-end">
+            <Image src={'/2563.png'} alt="" width={500} height={500} />
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
