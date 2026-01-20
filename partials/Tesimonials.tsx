@@ -10,9 +10,9 @@ const Testimonials = () => {
       initial={'hidden'}
       whileInView={'visible'}
       viewport={{ once: false }}
-      className="bg-primary py-30 hidden">
+      className="bg-primary py-30">
       <div className="container">
-        <div className="container grid grid-cols-2 gap-20 items-center">
+        <div className="container grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
           <div className="text-white space-y-5">
             <motion.div variants={fadeInUp} className="section-desc">Testimonials</motion.div>
             <motion.h3 variants={fadeInUp} className="section-title">What our clients say about us</motion.h3>
@@ -21,7 +21,7 @@ const Testimonials = () => {
               <button className="btn">Learn more</button>
             </motion.button>
           </div>
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             {testimonialsList.map(item => {
               return (
                 <motion.div variants={fadeInUp} className="bg-white rounded-2xl p-5 grid grid-[auto_1fr_auto]">

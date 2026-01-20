@@ -29,6 +29,7 @@ const Header = () => {
               return <Link href={item.href} className="text-primary text-2xl p-3" onClick={() => setisShowMenu(!isShowMenu)}>{item.title}</Link>
             })}
           </div>
+            <Link href={'/contacts'} className="btn" onClick={() => setisShowMenu(!isShowMenu)}>Contacts</Link>
         </div>
 
 

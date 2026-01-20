@@ -31,7 +31,7 @@ const AboutUs = () => {
           </motion.button>
         </div>
         <motion.div variants={fadeIn} className="">
-          <Image src={ImageAbout} alt="" />
+          <Image src={ImageAbout} width={450} alt="" />
         </motion.div>
       </div>
     </motion.section>

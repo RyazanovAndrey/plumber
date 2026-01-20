@@ -19,12 +19,12 @@ const Problems = () => {
       initial={'hidden'}
       whileInView={'visible'}
       viewport={{ once: false }}
-      className="bg-secondary pt-20 hidden">
+      className="bg-secondary pt-20">
       <div className="container">
-        <div className="grid grid-cols-2 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-3">
           <div>
             <motion.h3 variants={fadeInUp} className="section-title mb-10">Have a problem we'll fix it today</motion.h3>
-            <div className="grid grid-cols-2 gap-x-20 mb-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 mb-5">
               {problemsList.map(item => {
                 return <motion.div variants={fadeInUp} className="flex items-center gap-x-5 mt-5">
                   <div className="">{item.icon}</div>

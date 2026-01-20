@@ -11,10 +11,10 @@ const Blog = () => {
       initial={'hidden'}
       whileInView={'visible'}
       viewport={{ once: false }}
-      className="py-10 hidden">
+      className="py-10">
       <div className="container">
-        <div className="flex items-center justify-between">
-          <div className="max-w-120">
+        <div className="flex flex-col items-center justify-between gap-3">
+          <div className="max-w-120 text-center">
             <motion.div variants={fadeInUp} className="section-desc">Our blog</motion.div>
             <motion.div variants={fadeInUp} className="section-title">Latest plumbing tips and industry updates</motion.div>
           </div>
@@ -22,7 +22,7 @@ const Blog = () => {
             <Link href={'/blog'} className="btn">Browse all articles</Link>
           </motion.button>
         </div>
-        <div className="grid grid-cols-3 mt-10 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-5">
           {blogList.map(item => {
             return (
               <motion.div variants={fadeInUp} className="border border-gray-200 rounded-2xl overflow-hidden">

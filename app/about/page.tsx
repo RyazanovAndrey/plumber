@@ -25,10 +25,10 @@ export default function Page() {
       </section>
       <section className="mt-20">
         <div className="container">
-          <div className="grid grid-cols-2 gap-x-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="">
-              <div className="section-desc">Our story</div>
-              <h3 className="section-title">From humble beginnings to trusted experts</h3>
+              <div className="section-desc mb-5">Our story</div>
+              <h3 className="section-title mb-5">From humble beginnings to trusted experts</h3>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex eveniet, aspernatur harum ab molestiae corrupti rerum consectetur sed id facere magnam, nam magni ipsa quasi praesentium aperiam? Libero odit officia voluptatibus atque dicta est repellendus sequi doloribus? Repudiandae repellendus odio officia culpa, sint eius, natus, animi a ut impedit dolore porro? Laboriosam pariatur temporibus tempore veritatis ea, similique excepturi est. Repudiandae sunt labore voluptas excepturi harum nesciunt in molestiae dignissimos eaque provident, doloribus nostrum! Accusantium adipisci temporibus eligendi facilis sapiente cumque, ut harum dolor error, voluptatum quaerat pariatur earum, corporis vel! Quia, adipisci. Eaque, veniam. Aspernatur voluptatum laudantium debitis quo.</p>
             </div>
             <div className="flex justify-end">
@@ -39,7 +39,7 @@ export default function Page() {
       </section>
       <section>
         <div className="container">
-          <div className="grid grid-cols-4 gap-x-5 my-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-20">
             {teamCardItems.map(item => {
               return (
                 <div className="relative bg-gray-200 rounded-2xl">
@@ -66,7 +66,7 @@ export default function Page() {
             <div className="section-desc">Our fundations</div>
             <h3 className="section-title">The principles behind <br /> our success</h3>
           </div>
-          <div className="grid grid-cols-4 gap-x-5 mb-20">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-20">
             {ourFoundationCardItems.map(item => {
               const Icon = item.icon
               return (

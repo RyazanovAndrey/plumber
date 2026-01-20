@@ -6,10 +6,10 @@ const Footer = () => {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="py-5 hidden">
+    <footer className="py-5">
       <div className="container">
         <div className="">
-          <div className="grid grid-cols-4 gap-x-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
           <div className="">
             <div className="font-bold">Plumber</div>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, impedit?</p>

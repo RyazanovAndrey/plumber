@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import { blogList } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
+import * as motion from "motion/react-client"
+import { containerStagger, fadeInUp } from "@/motion/animation";
 
 export const metadata: Metadata = {
   title: 'Our blog',
@@ -10,27 +12,32 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <section className="py-30">
+    <motion.section className="py-30"
+      initial={'hidden'}
+      whileInView={'visible'}
+      variants={containerStagger}
+      viewport={{ once: false }}
+    >
       <div className="container">
         <div className="text-center flex justify-center">
           <div className="max-w-200">
-            <div className="section-title">Blog</div>
-            <p>Discover helpful plumbing tips, maintenance advice, and expert insights from the Plumber team</p>
+            <motion.div variants={fadeInUp} className="section-title">Blog</motion.div>
+            <motion.p variants={fadeInUp} >Discover helpful plumbing tips, maintenance advice, and expert insights from the Plumber team</motion.p>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-5 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
           {blogList.map(item => {
-            return <div className="border border-gray-200 rounded-2xl overflow-hidden">
+            return <motion.div variants={fadeInUp} className="border border-gray-200 rounded-2xl overflow-hidden">
               <Image src={item.img} alt="" width={500} height={300} />
               <div className="p-5 space-y-5">
                 <div className="text-md font-bold">{item.title}</div>
                 <div className="">{item.date}</div>
                 <Link href={`/blog/${item.id}`} className="underline">Read more</Link>
               </div>
-            </div>
+            </motion.div>
           })}
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
