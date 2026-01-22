@@ -10,6 +10,12 @@ export const findItem = (slug: string) => {
     return findInfo
 }
 
+export async function generateStaticParams() {
+  return blogList.map(item => ({
+    slug: item.id
+  }))
+}
+
 export const generateMetadata = async ({ params }: TProps) => {
     const { slug } = await params
     const findInfo = findItem(slug)
