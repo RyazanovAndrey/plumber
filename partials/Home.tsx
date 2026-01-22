@@ -30,11 +30,11 @@ const Home = () => {
       <div>
         <div className="container flex flex-col gap-y-3 md:flex-row">
           <motion.div variants={fadeInUp} className="relative top-0 md:-top-10 left-0 flex gap-x-3 bg-white p-5 rounded-2xl md:rounded-l-2xl mr-3 shadow-2xl md:max-w-75 text-primary md:max-h-35 font-semibold">
-            <Image src={'/icon-1.svg'} width={70} height={70} alt="" />
+            <Image src={'icon-1.svg'} width={70} height={70} alt="" />
             <p>Emergency plumbing repairs available 24/7. Fast response time guaranteed</p>
           </motion.div>
           <motion.div variants={fadeInUp} className="bg-secondary p-5 rounded-2xl text-primary font-semibold md:max-w-60 space-y-2 relative top-0 md:-top-20 left-0">
-            <Image src={'/icon-2.svg'} width={70} height={70} alt="" />
+            <Image src={'icon-2.svg'} width={70} height={70} alt="" />
             <p>Licensed and insured plumbing professional with over 10 years of experience</p>
             <Link href={'/'} className="btn-fill-blue">Here us</Link>
           </motion.div>

@@ -40,7 +40,7 @@ const Problems = () => {
             </motion.button>
           </div>
           <motion.div variants={fadeIn} className="flex justify-end">
-            <Image src={'/2563.png'} alt="" width={500} height={500} />
+            <Image src={'2563.png'} alt="" width={500} height={500} />
           </motion.div>
         </div>
       </div>
