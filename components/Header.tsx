@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <header className='header'>
       <div className="container flex justify-between items-center">
-        <div className="text-3xl">Plumber</div>
+        <Link href={'/'} className="text-3xl">Plumber</Link>
         <div className="hidden lg:flex gap-x-20 px-2 items-center">
           {navLinks.map(item => {
             const isActive = path == item.href || path.startsWith(item.href) && item.href !== '/'

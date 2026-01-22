@@ -5,6 +5,8 @@ import { teamCardItems } from "@/data";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import { ourFoundationCardItems } from "@/data";
 import Testimonials from "@/partials/Tesimonials";
+import * as motion from "motion/react-client"
+import { containerStagger, fadeIn, fadeInUp } from "@/motion/animation";
 
 export const metadata: Metadata = {
   title: 'About us',
@@ -14,35 +16,35 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <section className="pt-30">
+      <motion.section className="pt-30"
+        initial={'hidden'}
+        whileInView={'visible'}
+        variants={containerStagger}
+        viewport={{ once: false }}
+      >
         <div className="container">
           <div className="text-center">
-            <p className="section-desc">About us</p>
-            <p className="section-title">Delivering reliable solutions for over 15 years </p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, eius maiores vero dolorem aliquid incidunt reiciendis necessitatibus quis, adipisci laborum laboriosam fugit reprehenderit consequatur! Porro eaque dolor consequatur doloremque expedita.</p>
+            <motion.p variants={fadeInUp} className="section-desc">About us</motion.p>
+            <motion.p variants={fadeInUp} className="section-title">Delivering reliable solutions for over 15 years </motion.p>
+            <motion.p variants={fadeInUp}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, eius maiores vero dolorem aliquid incidunt reiciendis necessitatibus quis, adipisci laborum laboriosam fugit reprehenderit consequatur! Porro eaque dolor consequatur doloremque expedita.</motion.p>
           </div>
-        </div>
-      </section>
-      <section className="mt-20">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="">
-              <div className="section-desc mb-5">Our story</div>
-              <h3 className="section-title mb-5">From humble beginnings to trusted experts</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex eveniet, aspernatur harum ab molestiae corrupti rerum consectetur sed id facere magnam, nam magni ipsa quasi praesentium aperiam? Libero odit officia voluptatibus atque dicta est repellendus sequi doloribus? Repudiandae repellendus odio officia culpa, sint eius, natus, animi a ut impedit dolore porro? Laboriosam pariatur temporibus tempore veritatis ea, similique excepturi est. Repudiandae sunt labore voluptas excepturi harum nesciunt in molestiae dignissimos eaque provident, doloribus nostrum! Accusantium adipisci temporibus eligendi facilis sapiente cumque, ut harum dolor error, voluptatum quaerat pariatur earum, corporis vel! Quia, adipisci. Eaque, veniam. Aspernatur voluptatum laudantium debitis quo.</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mt-20">
+            <div>
+              <motion.div variants={fadeInUp} className="section-desc mb-5">Our story</motion.div>
+              <motion.h3 variants={fadeInUp} className="section-title mb-5">From humble beginnings to trusted experts</motion.h3>
+              <motion.p variants={fadeInUp}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex eveniet, aspernatur harum ab molestiae corrupti rerum consectetur sed id facere magnam, nam magni ipsa quasi praesentium aperiam? Libero odit officia voluptatibus atque dicta est repellendus sequi doloribus? Repudiandae repellendus odio officia culpa, sint eius, natus, animi a ut impedit dolore porro? Laboriosam pariatur temporibus tempore veritatis ea, similique excepturi est. Repudiandae sunt labore voluptas excepturi harum nesciunt in molestiae dignissimos eaque provident, doloribus nostrum! Accusantium adipisci temporibus eligendi facilis sapiente cumque, ut harum dolor error, voluptatum quaerat pariatur earum, corporis vel! Quia, adipisci. Eaque, veniam. Aspernatur voluptatum laudantium debitis quo.</motion.p>
             </div>
             <div className="flex justify-end">
-              <Image src={slideImg1} alt="" width={500} height={500} className="rounded-2xl" />
+              <motion.div variants={fadeIn} className="">
+                <Image src={slideImg1} alt="" width={500} height={500} className="rounded-2xl" />
+              </motion.div>
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div className="container">
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-20">
             {teamCardItems.map(item => {
               return (
-                <div className="relative bg-gray-200 rounded-2xl">
+                <motion.div variants={fadeInUp} className="relative bg-gray-200 rounded-2xl">
                   <Image src={item.img} width={300} height={100} alt="" />
                   <div className="absolute bottom-0 left-0 p-3 w-full">
                     <div className="relative bg-secondary p-3 text-center rounded-lg min-h-30">
@@ -58,31 +60,33 @@ export default function Page() {
                       <div className="">{item.role}</div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               )
             })}
           </div>
           <div className="text-center mb-15">
-            <div className="section-desc">Our fundations</div>
-            <h3 className="section-title">The principles behind <br /> our success</h3>
+            <motion.div variants={fadeInUp} className="section-desc">Our fundations</motion.div>
+            <motion.h3  variants={fadeInUp}className="section-title">The principles behind <br /> our success</motion.h3>
           </div>
+
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-20">
             {ourFoundationCardItems.map(item => {
               const Icon = item.icon
               return (
-                <div className="text-center flex flex-col items-center gap-5">
+                <motion.div variants={fadeInUp} className="text-center flex flex-col items-center gap-5">
                   <div className="bg-secondary size-20 rounded-full flex items-center justify-center">
                     <Icon size={32} color="#092c52" />
                   </div>
                   <p className="font-bold">{item.title}</p>
                   <p>{item.text}</p>
-                </div>
+                </motion.div>
               )
             })}
           </div>
         </div>
-        <Testimonials />
-      </section>
+
+      </motion.section>
+
     </>
   )
 }
